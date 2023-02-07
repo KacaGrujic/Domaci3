@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsCartFill } from 'react-icons/bs';
+import { BsCartFill } from "react-icons/bs";
 
 function MenuBar({ cartNum, isHome, isShop }) {
   return (
     <div className={isHome === 1 ? "menu-bar" : "menu-else"}>
       <Link to="/" className="link-img-flower">
         <img
-          src="https://www.pngfind.com/pngs/m/483-4830429_png-file-real-flowers-background-png-transparent-png.png"
+          src="https://www.freeiconspng.com/uploads/purple-flower-png-5.png"
           className={isHome === 1 ? "img-flower" : "img-flower-else"}
+          
         />
       </Link>
       {isHome === 1 ? <br /> : <></>}
 
       <Link to="/" className={isHome === 1 ? "txt-flower" : "txt-flower-else"}>
-        Cvecara
+        Flower
       </Link>
       <div
         className={
@@ -24,9 +25,9 @@ function MenuBar({ cartNum, isHome, isShop }) {
         <Link
           to="/shop"
           className="menu-bar-items"
-          style={isShop === 1 ? { color: "red" } : { color: "white" }}
+          style={isShop === 1 ? { color: "purple" } : { color: "white" }}
         >
-          Prodavnica
+          Shop
         </Link>
       </div>
       {isShop === 1 ? (

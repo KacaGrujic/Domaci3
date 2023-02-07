@@ -1,45 +1,53 @@
 import React from "react";
-import { BsPlusLg, BsDashLg } from "react-icons/bs";
+import SingleProduct from "./SingleProduct";
 
-function SingleProduct({ product, onAdd, inCart, onRemove }) {
+function Cart({ products, onRemove }) {
+  let total = 0;
   return (
-    <div className="card" style={{ margin: 15 }}>
-      <img src={product.url} alt="image" className="img-flowers" />
-      <div className="card-body">
-        <h3 className="card-title">{product.title}</h3>
-        <p className="card-text">{product.description}</p>
-        <p className="card-price">€ {product.price}</p>
+    <>
+      <div className="all-products">
+        {products.map(
+          (prod) => (
+            (total += prod.price * prod.amount),
+            (
+              <SingleProduct
+                product={prod}
+                key={prod.id}
+                inCart={1}
+                onRemove={onRemove}
+              />
+            )
+          )
+        )}
       </div>
-      {inCart === 0 ? (
-        <>
-          <button
-            className="btn"
-            onClick={() => onAdd(product.title, product.id)}
-          >
-            <BsPlusLg />
-          </button>
-          <button
-            className="btn"
-            onClick={() => onRemove(product.title, product.id)}
-          >
-            <BsDashLg />
-          </button>
-        </>
+      {total === 0 ? (
+        <></>
       ) : (
         <>
-          <h3>Amount: {product.amount}</h3>
-
-          <button
-            className="btn"
-            onClick={() => onRemove(product.title, product.id)}
-            style={{ color: "red" }}
-          >
-            Remove
-          </button>
+          <div className="div-order">
+            <h2 className="txt-your-order">Your order</h2>
+            <table className="table-order">
+              <tr>
+                <th>Item</th>
+                <th>Amount</th>
+                <th>Price</th>
+              </tr>
+              {products.map((prod) => (
+                <>
+                  <tr>
+                    <td>{prod.title}</td>
+                    <td>{prod.amount}</td>
+                    <td>€ {prod.price}</td>
+                  </tr>
+                </>
+              ))}
+            </table>
+            <h3 className="txt-total">Total: € {total}</h3>
+          </div>
         </>
       )}
-    </div>
+    </>
   );
 }
 
-export default SingleProduct;
+export default Cart;

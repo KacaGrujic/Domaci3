@@ -1,38 +1,64 @@
-.App {
+* {
+  font-family: "Poppins";
+}
+body {
+  background-image: url("https://cdn.allwallpaper.in/wallpapers/960x640/14700/flowers-pink-cosmos-flower-960x640-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.menu-bar {
+  background-color: rgb(103, 75, 107);
+  width: 20%;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-flower {
+  margin-top: 30px;
+  width: 55%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.txt-flower {
   color: white;
+  font-size: 35px;
+  text-decoration: none;
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.menu-else {
+  background-color: black;
+  width: 100%;
+  height: 9vh;
+  position: fixed;
+  margin-top: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-flower-else {
+  width: 70px;
+}
+.txt-flower-else {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.menu-bar-items {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+.menu-bar-items-div {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 25px;
+}
+.menu-bar-items-div-else {
+  text-align: center;
+  display: inline;
+  margin-left: 30px;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 110px;
+  margin-top: 29px;
 }
