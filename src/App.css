@@ -2,31 +2,32 @@
   font-family: "Poppins";
 }
 body {
-  background-image: url("https://cdn.allwallpaper.in/wallpapers/960x640/14700/flowers-pink-cosmos-flower-960x640-wallpaper.jpg");
+  background-image: url("https://www.wallpapertip.com/wmimgs/99-992566_desktop-wallpapers-ultra-hd-flowers.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 .menu-bar {
-  background-color: rgb(103, 75, 107);
+  background-color: rgb(165, 110, 141);
   width: 20%;
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  opacity: 90%;
 }
 .img-flower {
   margin-top: 30px;
   width: 55%;
 }
 .txt-flower {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 35px;
   text-decoration: none;
   text-align: center;
 }
 .menu-else {
-  background-color: black;
+  background-color: rgb(99, 56, 81);
   width: 100%;
   height: 9vh;
   position: fixed;
@@ -36,7 +37,7 @@ body {
   width: 70px;
 }
 .txt-flower-else {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 35px;
   text-decoration: none;
   position: absolute;
@@ -61,4 +62,80 @@ body {
   position: absolute;
   margin-left: 110px;
   margin-top: 29px;
+}
+.img-sneakers {
+  width: 350px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.all-products {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  flex-basis: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-align: center;
+}
+.card-body {
+  margin: 20px;
+}
+.card-price {
+  font-size: 20px;
+}
+.card-text {
+  height: 200px;
+  margin-bottom: 35px;
+}
+.btn {
+  border-style: none;
+  background-color: transparent;
+  margin: 20px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+.icon-cart {
+  width: 25px;
+  height: 25px;
+  margin-top: 26px;
+  margin-right: 30px;
+}
+.cart-num {
+  position: absolute;
+  color: rgb(52, 25, 45);
+  font-weight: bold;
+  top: 8px;
+  right: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+}
+.div-order {
+  width: 500px;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 20px;
+}
+.txt-total {
+  text-align: end;
+}
+.table-order {
+  text-align: center;
+}
+th {
+  padding: 10px;
+}
+td {
+  padding-left: 15px;
+  padding-right: 15px;
 }
